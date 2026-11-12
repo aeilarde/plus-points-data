@@ -1,0 +1,69 @@
+﻿student,college,digital,printed,prefer, effectivenes, gwa
+1, CA,5–6 hours,7 hours or more,Digital learning resources,Moderately Effective,2.17
+2,CA,1–2 hours,1–2 hours,Both equally,Moderately Effective,2.16
+3,CA,1–2 hours,1–2 hours,Both equally,Effective,1.85
+4,CA,3–4 hours,3–4 hours,Printed learning resources,Effective,1.74
+5,CA,Less than 1 hour,Less than 1 hour,Digital learning resources,Very Ineffective,2.04
+6,CAS,3–4 hours,3–4 hours,Printed learning resources,Effective,2.19
+7,CAS,5–6 hours,3–4 hours,Digital learning resources,Effective,2.46
+8,CAS,1–2 hours,3–4 hours,Both equally,Very Effective,2.81
+9,CBE,1–2 hours,5–6 hours,Digital learning resources,Effective,1.92
+10,CBE,3–4 hours,3–4 hours,Digital learning resources,Very Effective,2.05
+11,CBE,7 hours or more,Less than 1 hour,Both equally,Effective,1.36
+12,CBE,Less than 1 hour,Less than 1 hour,Both equally,Effective,2.76
+13,CBE,1–2 hours,3–4 hours,Digital learning resources,Effective,2.7
+14,CBE,Less than 1 hour,3–4 hours,Digital learning resources,Effective,1.73
+15,CBE,Less than 1 hour,Less than 1 hour,Both equally,Moderately Effective,1.8
+16,CBE,1–2 hours,3–4 hours,Digital learning resources,Moderately Effective,1.83
+17,CBE,1–2 hours,Less than 1 hour,Printed learning resources,Moderately Effective,1.98
+18,CBE,5–6 hours,3–4 hours,Digital learning resources,Moderately Effective,2.72
+19,CFERM,5–6 hours,3–4 hours,Digital learning resources,Very Effective,2.27
+20,CFERM,3–4 hours,Less than 1 hour,Digital learning resources,Effective,2.68
+21,CFERM,3–4 hours,3–4 hours,Digital learning resources,Moderately Effective,2.08
+22,CFERM,3–4 hours,1–2 hours,Digital learning resources,Effective,1.74
+23,CFERM,1–2 hours,3–4 hours,Both equally,Effective,2.59
+24,CFERM,3–4 hours,Less than 1 hour,Printed learning resources,Very Effective,1.66
+25,CFERM,Less than 1 hour,1–2 hours,Digital learning resources,Moderately Effective,2.73
+26,CFERM,5–6 hours,Less than 1 hour,Printed learning resources,Effective,2.06
+27,CHE,3–4 hours,Less than 1 hour,Printed learning resources,Ineffective,1.55
+28,CHE,1–2 hours,3–4 hours,Both equally,Effective,1.96
+29,CHE,5–6 hours,3–4 hours,Printed learning resources,Effective,1.98
+30,CHE,7 hours or more,Less than 1 hour,Printed learning resources,Effective,2.12
+31,CHE,5–6 hours,1–2 hours,Printed learning resources,Effective,2.31
+32,CHE,1–2 hours,1–2 hours,Printed learning resources,Moderately Effective,2.24
+33,CHE,1–2 hours,3–4 hours,Printed learning resources,Moderately Effective,2.16
+34,CITE,3–4 hours,1–2 hours,Digital learning resources,Moderately Effective,1.91
+35,CITE,3–4 hours,7 hours or more,Printed learning resources,Ineffective,2.57
+36,CITE,5–6 hours,3–4 hours,Digital learning resources,Moderately Effective,1.54
+37,CITE,5–6 hours,1–2 hours,Digital learning resources,Moderately Effective,1.94
+38,CITE,7 hours or more,Less than 1 hour,Both equally,Moderately Effective,2.29
+39,CITE,3–4 hours,Less than 1 hour,Printed learning resources,Effective,2.52
+40,CITE,3–4 hours,Less than 1 hour,Printed learning resources,Moderately Effective,1.97
+41,CITE,Less than 1 hour,3–4 hours,Digital learning resources,Ineffective,2.66
+42,COE,1–2 hours,3–4 hours,Both equally,Effective,2.21
+43,COE,7 hours or more,5–6 hours,Printed learning resources,Moderately Effective,1.6
+44,COE,5–6 hours,1–2 hours,Both equally,Moderately Effective,1.89
+45,COE,Less than 1 hour,5–6 hours,Printed learning resources,Very Effective,2.24
+46,COE,3–4 hours,1–2 hours,Both equally,Effective,2.21
+47,COE,Less than 1 hour,1–2 hours,Digital learning resources,Very Effective,2.24
+48,COE,1–2 hours,1–2 hours,Digital learning resources,Moderately Effective,2
+49,COE,1–2 hours,Less than 1 hour,Both equally,Very Effective,1.67
+50,COE,5–6 hours,3–4 hours,Both equally,Effective,2.21
+51,COE,5–6 hours,1–2 hours,Printed learning resources,Effective,2.1
+52,CTE,3–4 hours,1–2 hours,Printed learning resources,Moderately Effective,2.63
+53,CTE,5–6 hours,1–2 hours,Digital learning resources,Effective,2.47
+54,CTE,5–6 hours,3–4 hours,Digital learning resources,Very Effective,2.48
+55,CTE,1–2 hours,1–2 hours,Both equally,Very Effective,1.81
+56,CTE,3–4 hours,3–4 hours,Both equally,Moderately Effective,1.56
+57,CTE,3–4 hours,3–4 hours,Printed learning resources,Effective,2.32
+58,CTE,1–2 hours,3–4 hours,Printed learning resources,Moderately Effective,2.58
+59,CTE,1–2 hours,7 hours or more,Both equally,Ineffective,2.82
+60,CTE,Less than 1 hour,1–2 hours,Both equally,Effective,2.52
+61,CTE,5–6 hours,1–2 hours,Digital learning resources,Effective,2.45
+62,CTE,Less than 1 hour,Less than 1 hour,Both equally,Very Effective,1.5
+63,CTE,3–4 hours,1–2 hours,Digital learning resources,Very Effective,2.16
+64,CTE,3–4 hours,1–2 hours,Digital learning resources,Very Effective,1.92
+65,CTE,7 hours or more,1–2 hours,Digital learning resources,Effective,2.88
+66,CVM,3–4 hours,3–4 hours,Both equally,Very Effective,1.39
+67,CVM,1–2 hours,3–4 hours,Digital learning resources,Moderately Effective,1.53
+68,CVM,3–4 hours,1–2 hours,Both equally,Very Effective,2.2
