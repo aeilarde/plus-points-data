@@ -1,6 +1,6 @@
 ---
 title: "Two Variables: Qualitative"
-author: Orville D. Hombrebueno
+author: Ashley Ericka B. Ilarde
 date: today
 format:
   html:
@@ -27,88 +27,102 @@ library(ggstatsplot)
 library(downlit)
 library(broom)
 library(here)
+
 # load the data
 df <- read_csv(here("data","Data_Results.csv"))
 
-
-
-df|>
+df <- df|> 
   mutate(
-    Class = factor(Class)
+   college=factor(
+      college,
+      levels = c("CA","CAS","CBE","CFERM","CHE","CITE","COE","CTE","CVM"),
+      ordered = TRUE 
+    )
+
+  )|>
+  select(
+    "college",
+    "prefer"
   )
 ```
 
-## The Titanic Data Set
 
-The `Titanic_full` data set of the [{ggstatsplot}]{style="font-family:monospace;"} package is a data frame with 2201 rows and 5 variables.
 
-- `id` Dummy identity number for each person.
+## A Comparative Study of Digital and Printed Learning Resources Among NVSU Students
 
-- `Class` 1st, 2nd, 3rd, Crew.
+The Data set is gathered from 68 students with 2 variable.
 
-- `Sex` Male, Female.
+- `college` CA, CAS, CBE, CFERM, CHE, CITE, COE, CTE, CVM.
 
-- `Age` Child, Adult.
+- `prefer` Digital Learning Resources, Printed Learning Resources.
 
-- `Survived` No, Yes.
-
-This data set provides information on the fate of passengers on the fatal maiden voyage of the ocean liner Titanic, summarized according to economic status (class), sex, age and survival.
-
-The first 6 rows of the titanic data set are shown in @tbl-titanic.
-
+- 
 ```{r}
-#| label: tbl-titanic
+#| label: tbl-prefer
 #| warning: false
 #| message: false
 #| tbl-cap: "The first 6 observations of the data set."
 
-titanic |>
+df |>
   head() |> # getting the first six rows of the data
-  kable() # creating a table
+  kable(col.names = c("College", "Learning Resources Preference")) # creating a table
 ```
-
 ## Descriptive Statistics
 
-The frequency distribution of `Survived` when grouped according to `Sex` is shown in @tbl-summary. Most of the passengers are male. The majority of female passengers survived, whereas the majority of male passengers did not. Nonetheless, the number of survived passengers for both female and male are close, that is 344 and 367 respectively.
+The data aims to describe the students' learning resource preferences across nine different colleges, namely CA, CAS, CBE, CFERM, CHE, CITE, COE, CTE, and CVM. Based on the first six observations, most students showed different preferences regarding the use of learning materials. Two students preferred both digital and printed learning resources equally, while two preferred digital learning resources and two preferred printed learning resources. This suggests that students have varied preferences when it comes to choosing learning materials, with no single type dominating the first six observations. The data, which consists of 68 student respondents, will help determine the overall learning resource preference among students from the different colleges.
 
 ```{r}
 #| label: tbl-summary
-#| tbl-cap: "Summary statistics of `Survived` when grouped according to `Sex`."
+#| tbl-cap: "Summary statistics of `college` when grouped according to `prefer`."
 #| message: false
 
-titanic |> 
+df |> 
   tbl_summary(
-    by = Sex,
-    include = Survived
+    by = prefer,
+    include = college
   )
+```
+
+```{r}
+df |>
+tbl_cross(
+row = college,
+col = prefer,
+percent = 'column', 
+margin = c("row", "column"),
+label = list(
+college ~ "College",
+prefer ~ "Learning Resources Preference"
+)
+)
 ```
 
 # Hypothesis Testing
 
-## Research Question
+Research Question
 
-Does a passenger's sex affect their survival status?
+Does students' college program have a significant relationship with their preferred learning resources?
 
 ## Hypothesis and Test Statistics
 
-- $H_0:p_{Survived}-p_{Sex}=0$; passenger's sex does not affect their survival status.
+- $H_0:p_{College}-p_{Learning\,Resources\,Preference}=0$; students learning preference does not affect their learning effectiveness
 
-- $H_a:p_{Survived}-p_{Sex}\ne0$; passenger's sex affects their survival status.
+- $H_a:p_{College}-p_{Learing\,Resources\,Preference}\ne0$; students learning preference affects their learning effectiveness
 
-- Significance level, $\alpha=5\%$.
+- Significance level, $\alpha=5\%\,\text{or p-value}\,\le\,.05$.
 
 - **Pearson's** $\chi^2$-test of independence
 
 - Independence.
 
-- Expected counts: all expected counts are $\ge5$ (see @tbl-expected).
+- Expected counts: all expected counts are $\lt5$ (see @tbl-expected).
 
 ```{r}
 #| label: tbl-expected
 #| tbl-cap: Expected counts.
-
+#| warning: false
 # Create contingency table
-observed <- table(titanic$Survived, titanic$Sex)
+observed <- table(df$college, df$prefer)
 
 # Perform chi-squared test
 chi_test <- chisq.test(observed)
@@ -120,29 +134,26 @@ expected <- chi_test$expected
 expected |>
   as_tibble() |>
   mutate(
-    " " = c("No", "Yes")
+    " " = c("CA","CAS","CBE","CFERM","CHE","CITE","COE","CTE","CVM")
   ) |>
   relocate(" ", .before = 1) |>
   mutate(across(where(is.numeric), ~ round(.x, 2))) |>
   kable()
 ```
-
-## Results and Interpretation
-
-The bar chart and test statistics are shown on @fig-test.
-
 ```{r}
 #| label: fig-test
-#| fig-cap: Pie chart and test statistics.
+#| fig-cap: Bar chart and test statistics.
 #| fig-height: 3
 
 ggbarstats(
-  data = titanic,
-  x = Survived,
-  y = Sex,
+  data = df,
+  x = college,
+  y = prefer,
   bf.message = FALSE,
-  legend.title = "Survived?"
+  legend.title = "college"
 )
 ```
 
-Based on the bar chart and the *p*-value being lesser than 5% (*p*-value = .001), we reject the null hypothesis. There is a strong evidence that passenger's sex affects their survival status. Additionally, for both females and males, the survival rates were significantly different than 50% as indicated by a goodness of fit test for each gender.
+### Conclusion
+
+The results show that students from different colleges have varying preferences for learning resources, including digital, printed, and both equally. However, the chi-square test (p = 0.16) indicates no statistically significant relationship between college affiliation and learning resource preference. This suggests that students' college programs do not significantly influence their choice of learning resources.
